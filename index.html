@@ -87,7 +87,7 @@
                     <img class="img-responsive" src="img/profile.png" alt="">
                     <div class="intro-text">
                         
-                        <a id="submitButton" href="#" class="progress-button">Trenuj</a>
+                        <a id="submitButton" href="#" class="progress-button" onclick="train()">Trenuj</a>
 
                         <span class="name main">Pewnego razu..</span>
                         <hr class="star-light">    
@@ -176,6 +176,7 @@
           'motyl', 'karta', 'świst', 'grom', 'błysk', 'skrzypce', 'puzon',
           'garb', 'wykonanie', 'kolba', 'mazurek', 'strata', 'kanonada']
     
+    // function that gives random words in 7 sec interval
 
     function train() {
         setInterval(function(){ 
@@ -183,7 +184,7 @@
             $('.main').text(rand) }, 7000);
     };
 
-    train();
+
 </script>
 <script type="text/javascript">
     $(document).ready(function(){
@@ -297,7 +298,7 @@
             var options = $.extend({
                 type:'background-horizontal',
                 loading: 'Improwizuj..',
-                finished: 'Koniec'
+                finished: 'Trenuj'
             }, button.data());
 
             // Add the data attributes if they are missing from the element.

@@ -179,7 +179,7 @@
     // function that gives random words in 7 sec interval
 
     function train() {
-        setInterval(function(){ 
+        refreshIntervalId = setInterval(function(){ 
             var rand = words[Math.floor(Math.random() * words.length)];
             $('.main').text(rand) }, 7000);
     };
@@ -339,6 +339,10 @@
                 if(finish){
 
                     button.removeClass('in-progress').addClass('finished');
+
+                    clearInterval(refreshIntervalId);
+
+                    $('.main').text('Koniec.')
 
                     bar.delay(500).fadeOut(function(){
 
